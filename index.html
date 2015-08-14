@@ -14,11 +14,14 @@ $(document).ready(function(){
 		if(evt.fromElement.className.indexOf('pBtn')=== -1){
 		$(".pBtn").fadeIn(2);
 		$(".pBtn").animate({top: '10px', left: '10px'}, 100);
-		$(".tileImg").animate({boxShadow: "inset 50px 50px 50px #777"}, 100);
+		$(".tileImg").animate({opacity: "0.5"}, 200);
+        $(".ovrLay").animate({border: "5px solid #464141"}, 200);
 		}
 	}, function(evt){
 		if(evt.toElement.className.indexOf('pBtn')=== -1){
 			$(".pBtn").animate({top: 0, left: 0}, 100);
+            $(".tileImg").animate({opacity: 1}, 200);
+            $(".ovrLay").animate({border: "5px solid rgba(228, 227, 226, 0.98)"}, 200);
 			$(".pBtn").fadeOut(50);
 		}
 	});
@@ -32,6 +35,11 @@ $(document).ready(function(){
     <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4 centreTile">
     	<div class = "imageShadow">
     		<img src="img/puppy.jpg" class="tileImg"></img>
+            <!--<div class=" row vertical-center-row ovrLay">
+                <div>Image By John Doe</div>
+                <div>Clicked on 12/12/2012</div>
+
+            </div>-->
     	</div>	
     		<input type="button" class="btn-primary pBtn" value="Pin It"></input>
 
@@ -40,8 +48,8 @@ $(document).ready(function(){
     			<hr/>
     		</div>
     		<div class="col-xs-12 col-md-12 col-sm-12">
-    			<p class="row title1">Cute Puppy by John Doe</p>
-    			<p class="title">Likes and shares</p> <span class="socialIcon1"></span><span class="title" style = "left: 13%;">100</span><span class="socialIcon2"></span><span class="title" style = "left: 26%;">100</span><br>
+    			<p class="row title1">Dog by John Doe, Lorem Ipsum</p>
+    			<p class="title">Likes and shares</p> <span class="socialIcon1"></span><span class="title" style = "left: 13%;">100</span><span class="socialIcon2"></span><span class="title" style = "left: 27%;">100</span><br>
     			<hr/>
     		</div>
     		<div class="col-xs-12 col-md-12 col-sm-12">

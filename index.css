@@ -27,6 +27,8 @@
 	border-top-right-radius: 10px;
 	transition: box-shadow 2s;
 	z-index: -1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .pBtn{
 	position:absolute;
@@ -123,4 +125,15 @@
 	 float: right;
 	 top: 20px;
     	right: 87px;
+}
+.ovrLay{
+    z-index: 1;
+    position: absolute;
+    padding: 15px;
+    margin-left: 14%;
+    margin-top: 104%;
+    border: 5px solid rgba(228, 227, 226, 0.98);
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #fff;
 }
