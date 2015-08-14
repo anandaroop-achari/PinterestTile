@@ -1,0 +1,59 @@
+<html>
+<head>
+
+</head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="index.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".tileImg").hover(function(evt){
+		console.log(evt);
+		if(evt.fromElement.className.indexOf('pBtn')=== -1){
+		$(".pBtn").fadeIn(2);
+		$(".pBtn").animate({top: '10px', left: '10px'}, 100);
+		$(".tileImg").animate({boxShadow: "inset 50px 50px 50px #777"}, 100);
+		}
+	}, function(evt){
+		if(evt.toElement.className.indexOf('pBtn')=== -1){
+			$(".pBtn").animate({top: 0, left: 0}, 100);
+			$(".pBtn").fadeOut(50);
+		}
+	});
+});
+
+</script>
+<body>
+<img class="bgImg" src="img/background.jpg"></img>
+
+<div class="row vertical-center-row">
+    <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4 centreTile">
+    	<div class = "imageShadow">
+    		<img src="img/puppy.jpg" class="tileImg"></img>
+    	</div>	
+    		<input type="button" class="btn-primary pBtn" value="Pin It"></input>
+
+    		<div class="col-xs-12 col-md-12 col-sm-12">
+    			<p class="row title">by John Doe</p><br>
+    			<hr/>
+    		</div>
+    		<div class="col-xs-12 col-md-12 col-sm-12">
+    			<p class="row title1">Cute Puppy by John Doe</p>
+    			<p class="title">Likes and shares</p> <span class="socialIcon1"></span><span class="title" style = "left: 13%;">100</span><span class="socialIcon2"></span><span class="title" style = "left: 26%;">100</span><br>
+    			<hr/>
+    		</div>
+    		<div class="col-xs-12 col-md-12 col-sm-12">
+    			<span class="profHolder">
+    			<span class="profIcon"></span>
+    			</span>
+    			<div class="row title2">John Doe</div>
+    			<div class="row title title3">John123</div>
+    			<hr/>
+    		</div>
+
+    </div>
+</div>
+</body>
+</html>
